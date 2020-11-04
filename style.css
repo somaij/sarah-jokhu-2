@@ -1,0 +1,57 @@
+@keyframes colourchangingbackground{
+    0%{
+      background-color:#E7F3F3;
+    }
+    35%{
+      background-color:#EEF3E7;
+    }
+    65%{
+      background-color:#F3E9E7;
+    }
+     100%{
+      background-color:#E7F3F3;
+    }
+  }
+  @keyframes colourchangingtext{
+    0%{
+      color:#E7F3F3;
+    }
+    35%{
+      color:#EEF3E7;
+    }
+    65%{
+      color:#F3E9E7;
+    }
+     100%{
+      color:#E7F3F3;
+    }
+  }
+  body{
+    animation-name: colourchangingbackground;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  h1, .sub{
+    animation-name: colourchangingtext;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  h1{
+    font-size:4rem;
+    margin:0;
+  }
+  .sub{
+    text-transform:uppercase;
+    letter-spacing:2.5px;
+  }
+  
+  #masthead{
+    background-color:#000;
+    height:200px;
+    width:800px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto;
+    text-align:center;
+  }
