@@ -101,6 +101,7 @@ h3{
 a {
     color: #444;
     text-decoration: none;
+    transition:250ms all ease;
 }
 h1,.sub {
 	animation-name: colourchangingtext;
@@ -178,8 +179,18 @@ h1,.sub {
     align-items: flex-start;
     justify-content: space-between;
 }
+#cols .col p a{
+    text-decoration: underline;
+    color:#000;
+}
+#cols .col p a:hover{
+    text-decoration: none;
+}
 #cols .col:hover{
     background-color:#000;
+    color:#FFF;
+}
+#cols .col:hover p a{
     color:#FFF;
 }
 #cols .col:hover a > svg path{
