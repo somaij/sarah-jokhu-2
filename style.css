@@ -72,7 +72,6 @@ html {
 body {
 	font: 400 16px/1.6 'Inter', sans-serif;
 	margin: 0;
-	height: 100%;
 	min-height: 100%;
 	display: flex;
     flex-direction: column;
@@ -128,7 +127,8 @@ h1,.sub {
 }
 
 #masthead {
-	background-color: #000;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("mast.jpeg");
+    background-size:cover;
     max-width: 1200px;
     height:500px;
     width:100%;
@@ -144,7 +144,7 @@ h1,.sub {
     animation-name: colourchangingborder;
 	animation-duration: 8s;
     animation-iteration-count: infinite;
-    padding:5rem;
+    padding:3rem;
 }
 #masthead::before, #masthead::after{
     content:"";
@@ -165,10 +165,26 @@ h1,.sub {
     right:0;
 }
 
-#cols{
+#bio .wrapper{
+    border:3px solid #000;
+    transition: 400ms all ease;
+}
+
+#bio .text, #bio .image{
+    padding:3rem;
+    width:48%;
+}
+
+#bio .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+#cols, #bio{
     padding:3rem 0 0;
 }
-#cols .container{
+#cols .container, #bio .container .wrapper{
     max-width: 1200px;
     margin:0 auto;
     display:flex;
@@ -275,7 +291,26 @@ input[type=text], input[type=email], textarea{
 #contact button{
     cursor: pointer;
 }
+footer{
+    background-color:#000;
+    padding:1rem;
+    color:#AAA;
+    text-align: center;
+    margin-top:3rem;
+}
+footer a{
+    color:#AAA;
+    text-decoration: underline;
+}
 @media screen and (max-width:991px){
+    #bio .container .wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width:80%;
+    }
+    #bio .image{
+        height:500px;
+    }
     #cols .container{
         flex-direction: column;
         align-items: center;
@@ -283,6 +318,12 @@ input[type=text], input[type=email], textarea{
     #cols .col{
         width:80%;
         margin-bottom: 2rem;
+    }
+    #bio .text, #bio .image{
+        width:100%;
+    }
+    #bio .image{
+        padding-bottom:0;
     }
     .col .text{
         height: auto;
